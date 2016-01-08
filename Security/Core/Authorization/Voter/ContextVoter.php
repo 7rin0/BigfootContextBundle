@@ -2,11 +2,10 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Security\Core\Authorization\Voter;
 
-use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
-use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-use Doctrine\ORM\EntityManager;
-
 use Bigfoot\Bundle\ContextBundle\Entity\Context;
+use Doctrine\ORM\EntityManager;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
 
 /**
  * ContextVoter

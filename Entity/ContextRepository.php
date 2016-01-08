@@ -4,10 +4,9 @@ namespace Bigfoot\Bundle\ContextBundle\Entity;
 
 use Bigfoot\Bundle\ContextBundle\Exception\InvalidConfigurationException;
 use Bigfoot\Bundle\ContextBundle\Service\ContextService;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query\Expr;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\PropertyAccess\Exception\NoSuchIndexException;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 

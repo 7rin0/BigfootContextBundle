@@ -2,16 +2,11 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Twig\Extension;
 
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Twig_Extension;
-use Twig_SimpleFunction;
-
 use Bigfoot\Bundle\ContentBundle\Entity\Page;
 use Bigfoot\Bundle\ContentBundle\Entity\Sidebar;
-use Bigfoot\Bundle\ContentBundle\Entity\Page\Block as PageBlock;
-use Bigfoot\Bundle\ContentBundle\Entity\Page\Sidebar as PageSidebar;
-use Bigfoot\Bundle\ContentBundle\Entity\Block;
 use Bigfoot\Bundle\ContextBundle\Service\ContextService;
+use Twig_Extension;
+use Twig_SimpleFunction;
 
 /**
  * ContextExtension

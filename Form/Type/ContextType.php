@@ -4,20 +4,18 @@ namespace Bigfoot\Bundle\ContextBundle\Form\Type;
 
 use Bigfoot\Bundle\ContextBundle\Entity\ContextRepository;
 use Bigfoot\Bundle\ContextBundle\Exception\InvalidConfigurationException;
+use Bigfoot\Bundle\ContextBundle\Manager\ContextManager;
+use Bigfoot\Bundle\ContextBundle\Service\ContextService;
+use Doctrine\ORM\EntityManager;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\PropertyAccess\Exception\NoSuchIndexException;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 use Symfony\Component\Security\Core\Authorization\AuthorizationChecker;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
-use Doctrine\ORM\EntityManager;
-use Doctrine\Common\Annotations\AnnotationReader;
-
-use Bigfoot\Bundle\ContextBundle\Service\ContextService;
-use Bigfoot\Bundle\ContextBundle\Manager\ContextManager;
 
 class ContextType extends AbstractType
 {

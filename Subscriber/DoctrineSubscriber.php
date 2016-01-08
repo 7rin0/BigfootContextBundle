@@ -2,17 +2,12 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Subscriber;
 
+use Bigfoot\Bundle\ContextBundle\Entity\Context;
 use Bigfoot\Bundle\ContextBundle\Entity\ContextRepository;
-use Doctrine\ORM\Events;
+use Bigfoot\Bundle\ContextBundle\Service\ContextService;
+use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PostFlushEventArgs;
-use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
-use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\EventSubscriber;
-
-use Bigfoot\Bundle\CoreBundle\Event\FormEvent;
-use Bigfoot\Bundle\ContextBundle\Entity\Context;
-use Bigfoot\Bundle\ContextBundle\Service\ContextService;
 
 /**
  * Doctrine Subscriber

@@ -2,9 +2,9 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Manager;
 
+use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Query\Expr;
-use Doctrine\Common\Annotations\AnnotationReader;
 
 class ContextManager
 {

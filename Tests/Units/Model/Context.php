@@ -2,10 +2,8 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Tests\Units\Model;
 
-use Symfony\Component\DependencyInjection\Container;
-
-use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use atoum\AtoumBundle\Test\Units;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 
 /**
  * Class Context

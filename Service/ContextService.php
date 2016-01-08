@@ -2,12 +2,11 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Service;
 
-use Doctrine\Common\Annotations\AnnotationReader;
-
-use Bigfoot\Bundle\ContextBundle\Loader\LoaderInterface;
-use Bigfoot\Bundle\ContextBundle\Loader\LoaderChain;
 use Bigfoot\Bundle\ContextBundle\Exception\NotFoundException;
 use Bigfoot\Bundle\ContextBundle\Exception\NotImplementedException;
+use Bigfoot\Bundle\ContextBundle\Loader\LoaderChain;
+use Bigfoot\Bundle\ContextBundle\Loader\LoaderInterface;
+use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 /**

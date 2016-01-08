@@ -2,13 +2,12 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Subscriber;
 
-use Symfony\Component\EventDispatcher\GenericEvent;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Form\FormFactory;
-
-use Bigfoot\Bundle\CoreBundle\Event\FormEvent;
-use Bigfoot\Bundle\CoreBundle\Annotation\Bigfoot\Context;
 use Bigfoot\Bundle\ContextBundle\Service\ContextService;
+use Bigfoot\Bundle\CoreBundle\Annotation\Bigfoot\Context;
+use Bigfoot\Bundle\CoreBundle\Event\FormEvent;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\EventDispatcher\GenericEvent;
+use Symfony\Component\Form\FormFactory;
 
 /**
  * Form Subscriber

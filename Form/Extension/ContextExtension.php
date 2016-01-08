@@ -2,16 +2,11 @@
 
 namespace Bigfoot\Bundle\ContextBundle\Form\Extension;
 
+use Bigfoot\Bundle\ContextBundle\Entity\ContextRepository;
+use Symfony\Bridge\Doctrine\Form\ChoiceList\ORMQueryBuilderLoader;
 use Symfony\Component\Form\AbstractTypeExtension;
-use Symfony\Component\Form\FormView;
-use Symfony\Component\Form\FormInterface;
-use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\PropertyAccess\PropertyAccess;
-use Symfony\Bridge\Doctrine\Form\ChoiceList\ORMQueryBuilderLoader;
-
-use Bigfoot\Bundle\ContextBundle\Entity\ContextRepository;
 
 class ContextExtension extends AbstractTypeExtension
 {

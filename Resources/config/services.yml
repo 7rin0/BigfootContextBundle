@@ -49,7 +49,7 @@ services:
             - '@bigfoot_context'
             - '@bigfoot_context.manager.context'
         tags:
-            - { name: form.type, alias: bigfoot_context }
+            - { name: form.type }
 
     # Context Form Extension
     bigfoot_context.form.extension.context:

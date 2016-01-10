@@ -1,5 +1,6 @@
 parameters:
     bigfoot_context.language_back.loader.class: 'Bigfoot\Bundle\ContextBundle\Loader\LanguageBackLoader'
+
 services:
     # Context Service
     bigfoot_context.service.context:

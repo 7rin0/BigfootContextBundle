@@ -22,6 +22,6 @@ class LanguageBackLoader extends AbstractLoader
      */
     public function getValue()
     {
-        return $this->getValueForKey($this->request->getLocale());
+        return $this->getValueForKey($this->requestStack->getLocale());
     }
 }

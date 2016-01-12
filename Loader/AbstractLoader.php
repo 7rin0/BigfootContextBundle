@@ -14,7 +14,7 @@ abstract class AbstractLoader implements LoaderInterface
     /**
      * @var Request
      */
-    protected $request;
+    protected $requestStack;
 
     /**
      * @var array
@@ -24,9 +24,9 @@ abstract class AbstractLoader implements LoaderInterface
     /**
      * @param RequestStack $requestStack
      */
-    public function setRequest(RequestStack $requestStack = null)
+    public function setRequestStack(RequestStack $requestStack = null)
     {
-        $this->request = $requestStack->getCurrentRequest();
+        $this->requestStack = $requestStack->getCurrentRequest();
     }
 
     /**
@@ -34,7 +34,7 @@ abstract class AbstractLoader implements LoaderInterface
      */
     public function getRequest()
     {
-        return $this->request;
+        return $this->requestStack;
     }
 
     /**

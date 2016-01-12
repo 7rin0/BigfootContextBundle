@@ -20,7 +20,7 @@ class ContextController extends BaseController
      *
      * @Route("/switch/{context}/{values}", name="bigfoot_context_switch")
      */
-    public function switchAction(Request $request, $context, $values)
+    public function switchAction(RequestStack $requestStack, $context, $values)
     {
         $values         = explode(',', $values);
         $chosenContexts = array($context => $values);

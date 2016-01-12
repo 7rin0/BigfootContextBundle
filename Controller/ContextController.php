@@ -5,7 +5,7 @@ namespace Bigfoot\Bundle\ContextBundle\Controller;
 use Bigfoot\Bundle\CoreBundle\Controller\BaseController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Context controller.
@@ -25,6 +25,7 @@ class ContextController extends BaseController
         $values         = explode(',', $values);
         $chosenContexts = array($context => $values);
         $user           = $this->getUser();
+        $requestStack = $requestStack->getCurrentRequest();
 
         if ($this->getContextManager()->isEntityContextualizable(get_class($user), $context)) {
             $context = $this->getEntityManager()->getRepository('BigfootContextBundle:Context')->findOneByEntityIdEntityClass($user->getId(), get_class($user));
@@ -50,7 +51,7 @@ class ContextController extends BaseController
             $this->getSession()->set('bigfoot/context/chosen_contexts', $chosenContexts);
         }
 
-        return $this->redirect($request->headers->get('referer'));
+        return $this->redirect($requestStack->headers->get('referer'));
     }
 
     public function intersectContexts($chosenContext, $allowedContext)

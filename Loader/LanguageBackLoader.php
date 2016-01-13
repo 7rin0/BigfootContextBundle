@@ -1,6 +1,7 @@
 <?php
 
 namespace Bigfoot\Bundle\ContextBundle\Loader;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class LanguageBackLoader
@@ -22,6 +23,10 @@ class LanguageBackLoader extends AbstractLoader
      */
     public function getValue()
     {
-        return $this->getValueForKey($this->requestStack->getLocale());
+        $requestStack = new RequestStack();
+        if($requestStack->getCurrentRequest()) {
+            $getLocale = $requestStack->getCurrentRequest()->getLocale();
+            return $this->getValueForKey($getLocale);
+        }
     }
 }

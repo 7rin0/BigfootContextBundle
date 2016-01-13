@@ -101,7 +101,7 @@ services:
         class: Bigfoot\Bundle\ContextBundle\Loader\AbstractLoader
         abstract: true
         calls:
-            - [setRequestStack, ['@request_stack']]
+            - [setRequestStack, ['@?request_stack=']]
             - [setContexts, ['%bigfoot_context.contexts%']]
 
     # BackOffice Language Loader

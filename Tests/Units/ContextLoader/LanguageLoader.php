@@ -61,12 +61,12 @@ class LanguageLoader extends Units\Test
         };
 
         $request = new \mock\Symfony\Component\HttpFoundation\Request();
-        $this->calling($request)->getPathInfo[0] = '/admin';
-        $this->calling($request)->getPathInfo[1] = '/foo/bar';
-        $this->calling($request)->getLocale[0] = 'en';
-        $this->calling($request)->getLocale[2] = 'fr';
+        $this->calling($this->getRequestStack())->getPathInfo[0] = '/admin';
+        $this->calling($this->getRequestStack())->getPathInfo[1] = '/foo/bar';
+        $this->calling($this->getRequestStack())->getLocale[0] = 'en';
+        $this->calling($this->getRequestStack())->getLocale[2] = 'fr';
 
-        $this->calling($container)->get = function () use ($request) {
+        $this->calling($container)->get = function () use ($this->getRequestStack()) {
             return $request;
         };
 

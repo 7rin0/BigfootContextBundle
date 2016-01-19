@@ -23,9 +23,8 @@ class LanguageBackLoader extends AbstractLoader
      */
     public function getValue()
     {
-        $requestStack = new RequestStack();
-        if($requestStack->getCurrentRequest()) {
-            $getLocale = $requestStack->getCurrentRequest()->getLocale();
+        if($this->getRequestStack()) {
+            $getLocale = $this->getRequestStack()->getLocale();
             return $this->getValueForKey($getLocale);
         }
     }

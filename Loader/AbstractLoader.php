@@ -30,6 +30,14 @@ abstract class AbstractLoader implements LoaderInterface
     }
 
     /**
+     * @return Request
+     */
+    public function getRequestStack()
+    {
+        return $this->requestStack;
+    }
+
+    /**
      * @param $contexts
      */
     public function setContexts($contexts)

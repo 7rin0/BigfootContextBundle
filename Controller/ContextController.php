@@ -24,7 +24,7 @@ class ContextController extends BaseController
         $values         = explode(',', $values);
         $chosenContexts = array($context => $values);
         $user           = $this->getUser();
-        $requestStack = $requestStack->getCurrentRequest();
+        $requestStack = $this->getRequestStack();
 
         if ($this->getContextManager()->isEntityContextualizable(get_class($user), $context)) {
             $context = $this->getEntityManager()->getRepository('BigfootContextBundle:Context')->findOneByEntityIdEntityClass($user->getId(), get_class($user));

@@ -8,6 +8,7 @@ use Bigfoot\Bundle\ContextBundle\Manager\ContextManager;
 use Bigfoot\Bundle\ContextBundle\Service\ContextService;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
@@ -89,7 +90,7 @@ class ContextType extends AbstractType
                         if ($this->securityAuthorizationChecker->isGranted('ROLE_ADMIN') or (isset($this->contexts[$context]) && (isset($allowedContexts) && count($allowedContexts[$contextValue])))) {
                             $form->add(
                                 $contextValue,
-                                'choice',
+                                ChoiceType::class,
                                 array(
                                     'choices'     => $this->handleContextValues($allowedContexts, $contextValue, $this->contexts[$contextValue]['values']),
                                     'data'        => $data,

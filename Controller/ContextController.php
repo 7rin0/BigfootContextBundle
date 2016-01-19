@@ -5,7 +5,6 @@ namespace Bigfoot\Bundle\ContextBundle\Controller;
 use Bigfoot\Bundle\CoreBundle\Controller\BaseController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Context controller.

@@ -30,14 +30,6 @@ abstract class AbstractLoader implements LoaderInterface
     }
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Request
-     */
-    public function getRequest()
-    {
-        return $this->requestStack;
-    }
-
-    /**
      * @param $contexts
      */
     public function setContexts($contexts)

@@ -4,6 +4,7 @@ namespace Bigfoot\Bundle\ContextBundle\Form\Extension;
 
 use Bigfoot\Bundle\ContextBundle\Entity\ContextRepository;
 use Symfony\Bridge\Doctrine\Form\ChoiceList\ORMQueryBuilderLoader;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -44,6 +45,6 @@ class ContextExtension extends AbstractTypeExtension
 
     public function getExtendedType()
     {
-        return 'entity';
+        return EntityType::class;
     }
 }

@@ -28,7 +28,8 @@ class ContextExtension extends AbstractTypeExtension
     {
         $loader = function (Options $options) {
             if ($options['contextualize'] === true || $options['query_builder'] !== null) {
-                $queryBuilder = ($options['contextualize'] === true) ? $this->contextRepository->createContextQueryBuilder($options['class']) : $options['query_builder'];
+                $queryBuilder = ($options['contextualize'] === true) ?
+                    $this->contextRepository->createContextQueryBuilder($options['class']) : $options['query_builder'];
 
                 return new ORMQueryBuilderLoader(
                     $queryBuilder,

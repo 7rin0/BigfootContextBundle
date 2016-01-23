@@ -1,7 +1,6 @@
 <?php
 
 namespace Bigfoot\Bundle\ContextBundle\Loader;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class LanguageBackLoader

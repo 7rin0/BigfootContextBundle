@@ -181,12 +181,4 @@ class ContextType extends AbstractType
             )
         );
     }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return 'bigfoot_context';
-    }
 }

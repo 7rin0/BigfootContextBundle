@@ -22,7 +22,7 @@ services:
     bigfoot_context.repository.context:
         class: Bigfoot\Bundle\ContextBundle\Entity\ContextRepository
         arguments: ['BigfootContextBundle:Context']
-        factory: ["@doctrine.orm.entity_manager", getRepository]
+        factory: ['@doctrine.orm.entity_manager', getRepository]
         calls:
             - [setSession, ['@session']]
             - [setContextService, ['@bigfoot_context']]

@@ -1,5 +1,5 @@
 bigfoot_context:
-    resource: "@BigfootContextBundle/Controller/"
+    resource: '@BigfootContextBundle/Controller/'
     type:     annotation
     prefix:   /admin
     schemes: [ %bigfoot.scheme% ]

@@ -25,7 +25,7 @@ services:
         factory: ['@doctrine.orm.default_entity_manager', getRepository]
         calls:
             - [setSession, ['@session']]
-            - [setContextService, ['@bigfoot_context']]
+            - [setContextService, ['@bigfoot_context.service.context']]
 
     # Context Voter
     bigfoot_context.voter.context:
@@ -46,7 +46,7 @@ services:
             - '@doctrine.orm.default_entity_manager'
             - '@session'
             - '@security.authorization_checker'
-            - '@bigfoot_context'
+            - '@bigfoot_context.service.context'
             - '@bigfoot_context.manager.context'
         tags:
             - { name: form.type }
@@ -63,7 +63,7 @@ services:
     bigfoot_context.twig.extension.context:
         class: 'Bigfoot\Bundle\ContextBundle\Twig\Extension\ContextExtension'
         arguments:
-            - '@bigfoot_context'
+            - '@bigfoot_context.service.context'
         tags:
             - { name: twig.extension }
 
@@ -80,7 +80,7 @@ services:
         class: 'Bigfoot\Bundle\ContextBundle\Subscriber\FormSubscriber'
         arguments:
             - '@form.factory'
-            - '@bigfoot_context'
+            - '@bigfoot_context.service.context'
         tags:
             - { name: kernel.event_subscriber }
 
@@ -88,7 +88,7 @@ services:
     bigfoot_context.subscriber.doctrine:
         class: 'Bigfoot\Bundle\ContextBundle\Subscriber\DoctrineSubscriber'
         arguments:
-            - '@bigfoot_context'
+            - '@bigfoot_context.service.context'
         tags:
             - { name: doctrine.event_subscriber, connection: default }
 
